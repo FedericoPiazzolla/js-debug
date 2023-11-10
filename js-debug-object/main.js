@@ -25,7 +25,7 @@ const cars = [
     {
         manufacturer: 'Volkswagen',
         model: 'Golf',
-        type: 'Benzina'
+        type: 'benzina'
     },
     {
         manufacturer: 'Fiat',
@@ -60,11 +60,11 @@ const cars = [
     {
         manufacturer: 'Audi',
         model: 'R8',
-        type: 'Benzina'
+        type: 'benzina' //scritta con al maiuscola
     },
 ];
 
-const gasolineCars = cars.filter( (auto) => auto.type === 'Benzina'); //sintassi sbagliata dell'arrow function: >=;
+const gasolineCars = cars.filter( (auto) => auto.type === 'benzina'); //sintassi sbagliata dell'arrow function: >=;
 
 const dieselCars = cars.filter( (auto) => 
     auto.type === 'diesel'
@@ -73,7 +73,7 @@ const dieselCars = cars.filter( (auto) =>
 //manca il return, errore nella scrittura di diesel, sbagliata la sintassi dell'arrow function
 
 const otherCars = cars.filter( (auto) => {
-    return auto.type !== 'Benzina' && auto.type !== 'Diesel';
+    return auto.type !== 'benzina' && auto.type !== 'diesel';
 }); //dovrebbe andare && al posto di or, senno riporta tutti i tipi di auto
 
 console.log('Auto a benzina');

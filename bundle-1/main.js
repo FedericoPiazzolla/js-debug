@@ -87,11 +87,9 @@ function displayEvenNumbers() {
     let evenNumbers = [];
     for (let i = 0; i < numbers.length; i++) {
         const curNumber = numbers[i];
-        if (numbers % 2 === 0) {
+        if (numbers[i] % 2 === 0) {
             evenNumbers.push(curNumber);
-        
         }
-        
     }
     return evenNumbers;
 }

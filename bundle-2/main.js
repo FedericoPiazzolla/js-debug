@@ -24,8 +24,7 @@ function checkAge() {
 checkAge();
 //message è assegnata come costante, quindi non potrà cambiare
 // SOLUZIONE
-function checkAge() {
-    const myAge = 32;
+function checkAge(myAge) {
     let message = '';
 
     if (myAge < 18) {
@@ -39,7 +38,6 @@ function checkAge() {
 function printColorsNumber() {
     const colors = ['blue', 'red', 'yellow', 'green', 'black'];
     console.log(`Nella mia palette ci sono ${colors.length} colori!`);
-    console.log(colors.length);
 }
 printColorsNumber();
 // errore di scrittura di lenght invece di length
@@ -82,7 +80,7 @@ function checkAccessImproved() {
 
     const userEmail = prompt('Inserisci il tuo indirizzo email');
 
-    let grantAccess = 'false';
+    let grantAccess = false;
 
     for (let i = 0; i < addresses.length; i++) {
         const email = addresses[i];
@@ -90,7 +88,7 @@ function checkAccessImproved() {
         if (userEmail.length > 5) {
 
             if (email === userEmail) {
-                grantAccess = 'true';
+                grantAccess = true;
 
             }
 
