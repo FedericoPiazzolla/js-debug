@@ -50,7 +50,7 @@ const cars = [
     {
         manufacturer: 'Ford',
         model: 'Kuga',
-        type: 'diesel'
+        type: 'diesel' //scritto con la maiuscola
     }, //mancava la virgola dopo }
     {
         manufacturer: 'Seat',
@@ -66,11 +66,11 @@ const cars = [
 
 const gasolineCars = cars.filter( (auto) => auto.type === 'Benzina'); //sintassi sbagliata dell'arrow function: >=;
 
-const dieselCars = cars.filter( (auto) => {
-    auto.type === 'diesel';
-    return;
-});
-//manca il return, errore nella scrittura di diesel
+const dieselCars = cars.filter( (auto) => 
+    auto.type === 'diesel'
+    
+);
+//manca il return, errore nella scrittura di diesel, sbagliata la sintassi dell'arrow function
 
 const otherCars = cars.filter( (auto) => {
     return auto.type !== 'Benzina' && auto.type !== 'Diesel';
