@@ -12,8 +12,13 @@
 
 
 // ESERCIZIO 1
+for (let i = 0; i > 5; i++) {
+    console.log(i);
+}
+
+// CORREZIONE
 for (let i = 0; i < 5; i++) {
-     console.log(i);
+    console.log(i);
 };
 console.log("---");
 /**
@@ -23,6 +28,13 @@ console.log("---");
  */
 
 // ESERCIZIO 2
+function addIfEven(num) {
+    if (num % 2 = 0) {
+        return num + 5;
+    }
+    return num;
+}
+// CORREZIONE
 function addIfEven(num) {
     if (num % 2 === 0) {
         return num + 5;
@@ -38,6 +50,12 @@ console.log("---");
  */
 
 // ESERCIZIO 3
+function loopToFive() {
+    for (let i = 0, i < 5, i++) {
+        console.log(i);
+    }
+}
+// CORREZIONE
 function loopToFive() {
     for (let i = 0; i < 5; i++) {
         console.log(i);
@@ -55,19 +73,32 @@ console.log("---");
 function displayEvenNumbers() {
     let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
     let evenNumbers = [];
-    for (let i = 0; i < numbers.length - 1; i++) {
-        if (numbers % 2 === 0); {
+    for (let i = 0; i < numbers.length - 1; i++;) {
+        if (numbers % 2 = 0); {
             evenNumbers.push(i);
-        
         }
         return evenNumbers;
     }
 }
-console.log(displayEvenNumbers());
+
+// CORREZIONE
+function displayEvenNumbers() {
+    let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+    let evenNumbers = [];
+    for (let i = 0; i < numbers.length; i++) {
+        const curNumber = numbers[i];
+        if (numbers % 2 === 0) {
+            evenNumbers.push(curNumber);
+        
+        }
+        
+    }
+    return evenNumbers;
+}
 displayEvenNumbers();
 // dovrebbe restituire [2,4,6,8]
 /**
  * 1. dovrebbe mostrare in console solo i numeri pari dell'array.
- * 2. a riga 58 il ; non va sul'ultimo parametro, 
- * 3. a riga 59 l'uguale va scritto ===,
+ * 2. a riga 88 il ; non va sul'ultimo parametro, 
+ * 3. a riga 89 l'uguale va scritto ===, a riga 88 non serve il -1 al lenght, manca una vaiabile che ottenga il numero dell'array, return deve essere esterno al ciclo for senno non funziona, non dobbiamo pushare i ma l'elemnto del ciclo ( curNumber) e a riga 90 il ; non va dopo l'if.
  */
