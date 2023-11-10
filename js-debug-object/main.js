@@ -50,13 +50,13 @@ const cars = [
     {
         manufacturer: 'Ford',
         model: 'Kuga',
-        type: 'Diesel'
-    },
+        type: 'diesel'
+    }, //mancava la virgola dopo }
     {
         manufacturer: 'Seat',
         model: 'Ibiza',
         type: 'metano'
-    }
+    },
     {
         manufacturer: 'Audi',
         model: 'R8',
@@ -64,15 +64,17 @@ const cars = [
     },
 ];
 
-const gasolineCars = cars.filter( (auto) >= auto.type === 'benzina');
+const gasolineCars = cars.filter( (auto) => auto.type === 'Benzina'); //sintassi sbagliata dell'arrow function: >=;
 
 const dieselCars = cars.filter( (auto) => {
     auto.type === 'diesel';
+    return;
 });
+//manca il return, errore nella scrittura di diesel
 
 const otherCars = cars.filter( (auto) => {
-    return auto.type !== 'benzina' || auto.type !== 'diesel';
-});
+    return auto.type !== 'Benzina' && auto.type !== 'Diesel';
+}); //dovrebbe andare && al posto di or, senno riporta tutti i tipi di auto
 
 console.log('Auto a benzina');
 console.log('*******************************');
